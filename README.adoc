@@ -1,4 +1,4 @@
-= Teidd Integration Parent and BOM
+= Teiid Integration Parent and BOM
 :toc:
 
 Parent and Bill Of Materials for Teiid, Teiid-Modeshape, Teiid-Komodo, etc.
