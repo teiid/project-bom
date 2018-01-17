@@ -104,14 +104,6 @@ as anyone should be able to build all its dependencies from source.
 
 NOTE: During conflicts, (all things being equal) prefer the latest and greatest version of a dependency in the BOM.
 
-=== Exclusions policy
-
-Dependency exclusions should be avoided, because they cannot be overwritten by child poms.
-
-*A dependency exclusion is only allowed to fix an undisputed bug in the dependency's pom.*
-All developers need to provide a unanimous (undisputed) vote to keep the exclusion.
-So as soon as 1 developer calls for the removal of an exclusion, he/she can remove it.
-
 === Version numbering
 
 This BOM has it's own version numbering and release lifecycle.
