@@ -5,6 +5,15 @@
 # Test copies current ip-bom, removes the <dependencyManagement> XML elements and tries to resolve all the dependencies using
 # "clean dependency:tree" Maven build. In case one of the dependencies is not available the build fails.
 
+if [ "x$1" = "x" ]; then
+	echo "No project name passed in"
+	exit
+
+fi
+
+#  shift the arguments so that any additional parameters are passed on the mvn command to resolve dependencies
+PROJ=$1; shift
+POMLOC="$PROJ/pom.xml"
 
 # Determine and use the current script dir, so that the script can be called from any working directory and still work correctly
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -15,7 +24,8 @@ cp ${SCRIPT_DIR}/pom-template.xml ${SCRIPT_DIR}/pom.xml
 # Extract dependencies from the ip-bom, remove <version> tags and <import> scope tags
 TMP_DEPS_FILE=${SCRIPT_DIR}/target/tmp-ip-bom-deps.txt
 mkdir -p ${SCRIPT_DIR}/target
-IP_BOM_POM_XML="${SCRIPT_DIR}/../teiid-integration-bom/pom.xml"
+IP_BOM_POM_XML="${SCRIPT_DIR}/../$POMLOC"
+
 
 # Replace marker with actual version
 VERSION=`sed -e '/<parent>/,/<\/parent>/!d' ${IP_BOM_POM_XML} | grep "<version>" | sed -e 's/.*<version>//g' | sed -e 's/<\/version>.*//g'`
@@ -29,5 +39,5 @@ sed -i -e "/<!--@DEPS@-->/{r ${TMP_DEPS_FILE}" -e 'd}' ${SCRIPT_DIR}/pom.xml
 # Dependency:resolve will resolve and download all direct dependencies (and their transitive dependencies as well)
 # mvn -U -f ${SCRIPT_DIR}/pom.xml -B -e clean dependency:resolve -s ${SCRIPT_DIR}/settings.xml $@
 
-mvn -U -f ${SCRIPT_DIR}/pom.xml -B -e clean dependency:resolve -s ${SCRIPT_DIR}/teiid-bom-deps-available-test-settings.xml $@
+mvn -U -f ${SCRIPT_DIR}/pom.xml -B -e clean dependency:resolve -s ${SCRIPT_DIR}/project-bom-deps-available-test-settings.xml $@
 

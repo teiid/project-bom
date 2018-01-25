@@ -13,16 +13,16 @@
     </parent>  
     
 	<groupId>org.teiid</groupId>
-	<artifactId>teiid-bom-parent</artifactId>
+	<artifactId>project-bom-parent</artifactId>
 	<packaging>pom</packaging>
-	<name>Teiid Bom Parent</name>
+	<name>Project Bom Parent</name>
 
     <version>1.0.0-SNAPSHOT</version>
-	<description>Parent Pom for  Bill Of Materials for Teiid, Teiid-Modeshape, Teiid-Komodo, etc.</description>
+	<description>Parent Pom for  Bill Of Materials for projects Teiid, Teiid-Modeshape, Teiid-Komodo, etc.</description>
     
     
     <modules>
-       <module>teiid-integration-bom</module>
+       <module>teiid-bom</module>
     </modules>
 
 	<properties>

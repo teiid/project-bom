@@ -4,17 +4,17 @@
   <modelVersion>4.0.0</modelVersion>
   <!-- Don't use jboss-integration-platform-parent as parent to make sure this POM is as isolated as possible -->
   <groupId>org.teiid</groupId>
-  <artifactId>teiid-integration-bom-deps-available-test</artifactId>
+  <artifactId>project-bom-deps-available-test</artifactId>
   <version>@VERSION@</version>
 
-  <name>Teiid Integration BOM - Dependencies Available Test</name>
+  <name>Project BOM - Dependencies Available Test</name>
   <description>POM used to test that all the dependencies provided by BOM are actually available (downloadable)</description>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.teiid</groupId>
-        <artifactId>teiid-integration-bom</artifactId>
+        <artifactId>teiid-bom</artifactId>
         <version>@VERSION@</version>
         <type>pom</type>
         <scope>import</scope>

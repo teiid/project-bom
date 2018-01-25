@@ -5,17 +5,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.teiid</groupId>
-		<artifactId>teiid-bom-parent</artifactId>
+		<artifactId>project-bom-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>teiid-integration-bom</artifactId>
+	<artifactId>teiid-bom</artifactId>
 	<packaging>pom</packaging>
 	<name>Teiid BOM</name>
 
 	<version>1.0.0-SNAPSHOT</version>
-	<description> Bill Of Materials for Teiid, Teiid-Modeshape, Teiid-Komodo, etc.</description>
+	<description> Bill Of Materials for Teiid</description>
 	<!-- CONVENTIONS: - Dependencies must be SORTED ALPHABETICALLY on groupId 
 		(other forms of sorting were found to be unclear and ambiguous). - 
 		Always extract the version as a property. - A element's 
