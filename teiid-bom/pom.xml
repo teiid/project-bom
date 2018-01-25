@@ -999,7 +999,16 @@
 				<artifactId>wildfly-server</artifactId>
 				<version>${version.org.wildfly.core}</version>
 			</dependency>
-
+	        <dependency>
+		        <groupId>xerces</groupId>
+		        <artifactId>xercesImpl</artifactId>
+		        <version>${version.xerces}</version>
+	        </dependency>
+	        <dependency>
+		        <groupId>xml-apis</groupId>
+		        <artifactId>xml-apis</artifactId>
+		        <version>${version.xml-apis}</version>
+		    </dependency>   
 		</dependencies>
 	</dependencyManagement>
 
