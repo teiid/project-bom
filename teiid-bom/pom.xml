@@ -791,9 +791,6 @@
 				<type>test-jar</type>
 				<version>${version.org.teiid}</version>
 			</dependency>
-			<!-- not published in 10.0 -->
-			<!--dependency> <groupId>org.teiid</groupId> <artifactId>teiid-txn-jbossts</artifactId> 
-				<version>${version.org.teiid}</version> </dependency -->
 			<dependency>
 				<groupId>org.teiid</groupId>
 				<artifactId>teiid-jboss-integration</artifactId>
@@ -849,11 +846,6 @@
 				<artifactId>translator-cassandra</artifactId>
 				<version>${version.org.teiid}</version>
 			</dependency>
-			<!--- stopped being published in 10.0 -->
-			<!--dependency> <groupId>org.teiid.connectors</groupId> <artifactId>translator-object</artifactId> 
-				<version>${version.org.teiid}</version> </dependency> <dependency> <groupId>org.teiid.connectors</groupId> 
-				<artifactId>translator-object</artifactId> <version>${version.org.teiid}</version> 
-				<type>test-jar</type> </dependency -->
 			<dependency>
 				<groupId>org.teiid.connectors</groupId>
 				<artifactId>translator-ws</artifactId>
