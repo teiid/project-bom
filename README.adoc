@@ -147,11 +147,12 @@ This section records which project/product versions use which BOM version.
 *** Teiid-Komodo 
 
 === Testing
-Directory `ip-bom-deps-available-test` contains simple Bash script that can be used to verify that all the dependencies
-declared in `<dependencyManagement>` are actually available (downloadable). The script uses ip-bom to get list of all
+Directory `project-bom-deps-available-test` contains simple Bash script that can be used to verify that all the dependencies
+declared in `<dependencyManagement>` are actually available (downloadable). The script uses {project-bom} to get list of all
 dependencies under `<dependencyManagement>` and then uses that list to create new POM that depends on all of them.
 Simple `dependency:resolve` Maven build is executed to make sure all dependencies are available. If there is one or more
 dependencies not available the build will fail. Following remote repositories are used: Maven Central, JBoss.org Nexus
 and Red Hat Public Product Repo (for *-redhat-X exceptions).
 
+Example:  ./run-deps-test.sh  teiid-bom
 
