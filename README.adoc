@@ -1,4 +1,4 @@
-= Teiid Integration Parent and BOM
+= Parent Integration BOM and Project Dependency BOMs
 :toc:
 
 Parent and Bill Of Materials for Teiid, Teiid-Modeshape, Teiid-Komodo, etc.
@@ -6,6 +6,11 @@ Parent and Bill Of Materials for Teiid, Teiid-Modeshape, Teiid-Komodo, etc.
 == Goal
 
 Align the dependencies of the projects early on in the development lifecycle so that all 3rd party dependencies are using the same version.
+
+== Overview
+
+The project-bom-parent bom will be used as the parent in the project.  It will provide the version properties so that projects align on the same 3rd party artifacts.  Each project, should have a corresponding sub project and related bom.   The project dependency bom, should be added to the dependency management section as an import
+
 
 == Building
 
@@ -15,13 +20,13 @@ $ mvn clean install
 
 == Usage
 
-The BOM may be imported into your dependency management
+The BOM may be imported into your dependency management.  The following is an example using the Teiid project dependency bom:
 ----
 <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.teiid</groupId>
-            <artifactId>teiid-integration-bom</artifactId>
+            <artifactId>teiid-bom</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <type>pom</type>
             <scope>import</scope>
@@ -30,15 +35,15 @@ The BOM may be imported into your dependency management
 </dependencyManagement>
 ----
 
-Any dependencies should be placed in the dependency management in `teiid-integration-bom`.
-Explicit versions should not be used; instead use a property which should be placed in `teiid-bom-parent`.
+Any dependencies should be placed in the dependency management in `teiid-bom`.
+Explicit versions should not be used; instead use a property which should be placed in `project-bom-parent`.
 
 Your project should inherit:
 
 ----
 <parent>
     <groupId>org.teiid</groupId>
-    <artifactId>teiid-bom-parent</artifactId>
+    <artifactId>project-bom-parent</artifactId>
     <version>10.0-SNAPSHOT</version>
 </parent>
 ----
