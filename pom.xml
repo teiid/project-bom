@@ -35,7 +35,7 @@
 	    <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Teiid Version -->
-        <version.org.teiid>10.1.0.Alpha1-SNAPSHOT</version.org.teiid>
+        <version.org.teiid>10.2.0-SNAPSHOT</version.org.teiid>
 
 
         <derby.version>10.2.1.6</derby.version>
@@ -112,11 +112,9 @@
         <version.org.wildfly.build-tools>1.1.6.Final</version.org.wildfly.build-tools>
         
         <version.net.oauth.core>20100527</version.net.oauth.core>
-        <version.net.sourceforge.saxon>9.5.1-6</version.net.sourceforge.saxon>
+        <version.net.sourceforge.saxon>9.8.0-7</version.net.sourceforge.saxon>
         <version.noggit>0.6</version.noggit>
-        <version.nux>1.6</version.nux>
-
-        <version.postgresql>9.2-1004-jdbc4</version.postgresql>
+        <version.postgresql>42.1.4</version.postgresql>
         <version.proj4j>0.1.0</version.proj4j>
 
 	    <!-- Overrides to allow the release process to commit: https://jira.codehaus.org/browse/MRELEASE-812 -->
