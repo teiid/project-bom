@@ -308,11 +308,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>nux</groupId>
-				<artifactId>nux</artifactId>
-				<version>${version.nux}</version>
-			</dependency>
-			<dependency>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-runtime</artifactId>
 				<version>${version.org.antlr}</version>
